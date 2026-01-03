@@ -1,73 +1,197 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-<meta charset="utf-8">
-<title>Demo Gram Panchayat</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>आदर्श गाव राळेगणसिद्धी - ग्रामपंचायत</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style - Copy.css">
 </head>
 <body>
-<header>
-  <div class="topbar">
-    <h2>🛖 Demo Gram Panchayat</h2>
-    <p>तालुका: डेमो | जिल्हा: डेमो | महाराष्ट्र</p>
-  </div>
-  <nav>
-    <ul>
-      <li>🏠 मुख्यपृष्ठ</li>
-      <li>🛖 ग्रा. Demo गाव</li>
-      <li>📘 पपाण</li>
-      <li>🏢 प्रशासकीय रचना</li>
-      <li>🛠 सेवासुविधा</li>
-      <li>🏛 सरकारी योजना</li>
-      <li>🖼 गॅलरी</li>
-      <li>🎥 व्हिडीओ गॅलरी</li>
-      <li>🔗 उपयुक्त दुवे</li>
-      <li>📞 संपर्क</li>
-    </ul>
-  </nav>
-</header>
-<section class="hero">
-  <img src="https:///1200/400" alt="Demo Village Image">
-  <h1>डेमो ग्रामपंचायत संकेतस्थळ</h1>
-</section>
-<section class="info">
-  <div class="card">
-    <h3>लोकसंख्या</h3>
-    <p>0000</p>
-  </div>
-  <div class="card">
-    <h3>शाळा</h3>
-    <p>00</p>
-  </div>
-  <div class="card">
-    <h3>वाडी</h3>
-    <p>00</p>
-  </div>
-  <div class="card">
-    <h3>कुटुंबे</h3>
-    <p>000</p>
-  </div>
-</section>
-<section class="about">
-  <h2>आमच्या ग्रामपंचायती बद्दल</h2>
-  <p>
-    हे एक डेमो संकेतस्थळ आहे. येथे आपण आपल्या ग्रामपंचायतीची माहिती
-    प्रकाशित करू शकता. ही सर्व माहिती केवळ सरावासाठी आहे.
-  </p>
-</section>
-<section class="gallery">
-  <h2>गॅलरी</h2>
-  <div class="images">
-    <img src="https://picsum.photos/250/150" alt="">
-    <img src="https://picsum.photos/251/150" alt="">
-    <img src="https://picsum.photos/252/150" alt="">
-  </div>
-</section>
-<footer>
-  <p>📍 Demo Gram Panchayat — Maharashtra</p>
-  <p>📞 मो. 0000000000 | ✉ demo@example.com</p>
-  <p> ही साईट केवळ डेमो व सरावासाठी आहे.</p>
-</footer>
+
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/Cp4qY71K/l-OGOEm.jpg" alt="Logo" />
+                <span>ग्रा. पं. राळेगणसिद्धी</span>
+            </div>
+            
+            <nav class="nav-container">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
+                    <li><a href="#history"><i class="fas fa-history"></i> इतिहास</a></li>
+                    
+                    <li><a href="about.html"><i class="fas fa-history"></i> आमच्याबद्दल</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-history"></i> फोटो गॅलरी</a></li>
+                    <li><a href="#stats"><i class="fas fa-info-circle"></i> माहिती</a></li>
+                    <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+                </ul>
+                <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <section class="main-slider swiper">
+            <div class="swiper-wrapper">
+                <!-- <div class="swiper-slide"><img src="https://shrikeshavgovind.in/data1/images/keshavgovind3.jpg" alt="Slide 1" /></div>
+                <div class="swiper-slide"><img src="https://shrikeshavgovind.in/data1/images/KeshavGovind7.jpg" alt="Slide 2" /></div> -->
+            <div class="swiper-slide"><img src="images/image3.png"alt="Slide 2" /></div>
+            <div class="swiper-slide"><img src="images/image2.png"alt="Slide 2" /></div>
+            
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+
+        <div class="content-container">
+            <div class="welcome-section" id="history">
+                <h1>ग्रामपंचायत कार्यालय राळेगणसिद्धी मध्ये आपले स्वागत आहे</h1>
+                <p><strong>गावाची ओळख व इतिहास:</strong> राळेगणसिद्धी हे महाराष्ट्रातील अहिल्यानगर जिल्ह्यातील एक आदर्श गाव आहे. ज्येष्ठ समाजसेवक <strong>श्री. अण्णा हजारे</strong> यांच्या नेतृत्वाखाली येथे सामाजिक परिवर्तनाची सुरुवात झाली. जलसंधारण, स्वच्छता आणि शिस्तबद्ध ग्रामव्यवस्थेमुळे हे गाव जागतिक स्तरावर प्रसिद्ध आहे.</p>
+                <p>१९७० नंतर अण्णा हजारे यांनी दारूबंदी, श्रमदान आणि जलसंधारणाच्या माध्यमातून गावाचा कायापालट केला.</p>
+            </div>
+
+            <section class="village-info" id="stats">
+                <h2 class="section-title">गावाची सामान्य माहिती</h2>
+                <div class="info-grid">
+                    <div class="info-card-item">
+                        <div class="info-label">एकूण लोकसंख्या</div>
+                        <div class="info-value">2365</div>
+                    </div>
+                    <div class="info-card-item">
+                        <div class="info-label">पुरुष / महिला</div>
+                        <div class="info-value">1217 / 1148</div>
+                    </div>
+                    <div class="info-card-item">
+                        <div class="info-label">शाळा / अंगणवाडी</div>
+                        <div class="info-value">2 / 4</div>
+                    </div>
+                    <div class="info-card-item">
+                        <div class="info-label">वार्षिक अंदाजपत्रक</div>
+                        <div class="info-value">₹ 5,68,782</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work-section">
+                <h2 class="section-title">विकास कामे व पुरस्कार</h2>
+                <div class="latest-info">
+                    <div class="info-card">
+                        <div class="info-text">
+                            <h3>सध्या सुरू असलेली कामे</h3>
+                            <p>• CSR फंडामधून पाणीपुरवठा योजनेला सौर ऊर्जा पॅनल बसविणे.</p>
+                            <p>• शाश्वत शेती व जलव्यवस्थापन प्रकल्प.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-text">
+                            <h3>मिळालेले पुरस्कार</h3>
+                            <p>• संत गाडगेबाबा ग्रामस्वच्छता अभियान</p>
+                            <p>• पर्यावरण संतुलित समृद्ध ग्राम</p>
+                            <p>• हागणदारी मुक्त गाव (स्मार्ट ग्राम)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team-section">
+                <h2 class="section-title">ग्रामपंचायत पदाधिकारी</h2>
+                <div class="info-grid">
+                    <div class="member-card">
+                        <h4>श्री जयसिंग सदाशिव मापारी</h4>
+                        <p>सरपंच</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>सौ मंगल संपतराव उगले</h4>
+                        <p>उपसरपंच</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>श्रीमती व्ही. एम. बोरुडे</h4>
+                        <p>ग्रामसेवक (8888007255)</p>
+
+                        <!-- •सरपंच, उपसरपंच नाव-श्री जयसिंग सदाशिव मापारी 
+सौ मंगल संपतराव उगले -उपसरपंच 
+श्री लाभेश गणपतरा औटी 
+सदस्य
+श्री धनंजय संपतराव पोटे सदस्य 
+श्री अनिल नामदेव मापारी सदस्य 
+सौ मंगल शरद मापारी सदस्या
+मंगल भास्कर पठारे सदस्य 
+सौ सुनीता भाऊ गाजरे सदस्य 
+सौ स्नेहल महेश फटांगडे सदस्य  -->
+                    </div>
+                    <div class="member-card">
+                        <h4>श्री लाभेश गणपतरा औटी </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>श्री धनंजय संपतराव पोटे</h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>श्री अनिल नामदेव मापारी </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>सौ मंगल शरद मापारी </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>सौ मंगल भास्कर पठारे </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>सौ सुनीता भाऊ गाजरे </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <div class="member-card">
+                        <h4>श्री स्नेहल महेश फटांगडे </h4>
+                        <p>सदस्य</p>
+                    </div>
+                    <!-- <div class="member-card">
+                        <h4>श्री मंगल भास्कर पठारे </h4>
+                        <p>सदस्य</p>
+                    </div> -->
+                    
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> https://maps.app.goo.gl/R7S2xjwcL3DXZmiS7</li>
+                    <li><i class="fas fa-phone"></i> +91 8888007255</li>
+                    <li><i class="fas fa-envelope"></i> contact@ralegansiddhi.org</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">सामाजिक चळवळ</h3>
+                <p>अण्णा हजारे यांच्या मार्गदर्शनाखाली राळेगणसिद्धीने आदर्श गाव संकल्पना यशस्वीपणे राबवली आहे.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 राळेगणसिद्धी | Developed By: Tandale </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.main-slider', {
+            loop: true,
+            autoplay: { delay: 4000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+        });
+
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

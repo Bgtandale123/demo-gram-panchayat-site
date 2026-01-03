@@ -1,0 +1,141 @@
+/* General Setup */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; }
+
+/* Header Styling */
+.header {
+    background: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.header.scrolled { background: linear-gradient(180deg, #ffef00 0%, #ffb700 100%); }
+.header-container { max-width: 1600px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; }
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.logo-container img { height: 55px; border-radius: 50%; border: 2px solid #fff; }
+.logo-container span { font-size: 24px; font-weight: 700; color: #000; }
+
+.nav-menu { list-style: none; display: flex; gap: 10px; }
+.nav-menu a { text-decoration: none; color: #000; font-weight: 600; padding: 10px 22px; border-radius: 50px; transition: 0.3s; }
+.nav-menu a:hover, .nav-menu a.active { background: rgba(255, 255, 255, 0.3); }
+
+/* Vision Page Styling */
+.main-wrapper { padding-top: 100px; }
+.vision-page {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb, #e8f5e8);
+    padding: 60px 20px;
+}
+.vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.vision-header {
+    background: linear-gradient(90deg, #fff720 0%, #3cd500 100%);
+    color: #000;
+    text-align: center;
+    padding: 30px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.vision-content { padding: 50px; }
+.section-title {
+    font-size: 30px;
+    color: #1565c0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #43a047;
+    display: inline-block;
+}
+
+.intro-text { font-size: 20px; font-weight: 600; margin-bottom: 20px; color: #2e7d32; }
+
+.vision-list {
+    list-style: none;
+    counter-reset: item;
+}
+.vision-list li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 55px;
+    font-size: 19px;
+    line-height: 1.6;
+}
+.vision-list li:before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    background: #ff6d00;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 109, 0, 0.3);
+}
+
+.mission-para {
+    background: rgba(67, 160, 71, 0.08);
+    padding: 30px;
+    border-left: 8px solid #43a047;
+    border-radius: 15px;
+    font-size: 19px;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+.goals-title {
+    font-size: 30px;
+    color: #1565c0;
+    margin: 40px 0 25px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #ff6d00;
+    display: inline-block;
+}
+
+/* Premium Footer */
+.footer {
+    background: linear-gradient(135deg, #00f260 0%, #0575e6 100%);
+    color: #000;
+    padding-top: 50px;
+}
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 30px;
+}
+.footer-section {
+    background: linear-gradient(180deg, #ffef00 0%, #ffb700 100%);
+    padding: 30px;
+    border-radius: 20px;
+}
+.footer-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid rgba(0,0,0,0.1); }
+.footer-bottom { text-align: center; padding: 25px; background: rgba(0,0,0,0.2); color: #fff; margin-top: 40px; }
+
+/* Mobile Menu */
+.hamburger { display: none; }
+@media (max-width: 992px) {
+    .hamburger { display: block; font-size: 28px; cursor: pointer; color: #000; }
+    .nav-menu {
+        position: fixed; left: -100%; top: 80px; width: 100%; height: 100vh;
+        background: #009efd; flex-direction: column; align-items: center; padding-top: 50px; transition: 0.4s;
+    }
+    .nav-menu.active { left: 0; }
+    .vision-content { padding: 30px 20px; }
+}

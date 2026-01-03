@@ -1,0 +1,130 @@
+/* Global Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Baloo 2', sans-serif;
+    background: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container { display: flex; align-items: center; }
+.logo-container img { height: 50px; border-radius: 50%; border: 2px solid #fff; }
+.logo-container span { font-size: 22px; font-weight: 700; color: #fff; margin-left: 10px; }
+
+.nav-menu { list-style: none; display: flex; gap: 10px; }
+.nav-menu a { text-decoration: none; color: #fff; font-weight: 600; padding: 8px 15px; transition: 0.3s; }
+.nav-menu a:hover { background: rgba(255,255,255,0.2); border-radius: 20px; }
+
+/* Slider Section - Images at Center */
+.main-wrapper { padding-top: 80px; }
+.main-slider { width: 100%; height: 60vh; background: #eee; }
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* Change to 'contain' if you don't want any cropping */
+    display: block;
+}
+
+/* Content Container */
+.content-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.section-title { text-align: center; margin-bottom: 30px; color: #1565c0; font-size: 32px; font-weight: bold; }
+
+.welcome-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+/* Info Grid Cards */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.info-card-item {
+    background: linear-gradient(45deg, #ffa751, #ffe259);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-value { font-size: 32px; font-weight: 700; color: #000; display: block; }
+.info-label { font-size: 18px; color: #333; font-weight: 600; }
+
+/* Cards Section */
+.latest-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.info-card { background: #e3f2fd; padding: 30px; border-radius: 15px; border-left: 5px solid #1565c0; }
+.info-card h3 { color: #ef6c00; margin-bottom: 15px; }
+
+/* Premium Footer */
+.footer {
+    background: linear-gradient(135deg, #00f260 0%, #0575e6 100%);
+    color: #000;
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    background: linear-gradient(180deg, #ffef00 0%, #ffb700 100%);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.footer-title { font-size: 22px; font-weight: 700; margin-bottom: 15px; border-bottom: 2px solid rgba(0,0,0,0.1); }
+.footer-contact { list-style: none; }
+.footer-contact li { margin-bottom: 10px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+
+.footer-bottom { text-align: center; padding: 20px; background: rgba(0,0,0,0.2); color: #fff; margin-top: 40px; }
+
+/* Responsive */
+.hamburger { display: none; }
+@media (max-width: 768px) {
+    .hamburger { display: block; font-size: 25px; color: #fff; cursor: pointer; }
+    .nav-menu {
+        position: fixed; left: -100%; top: 75px; width: 100%; height: 100vh;
+        background: #009efd; flex-direction: column; align-items: center; padding-top: 40px; transition: 0.4s;
+    }
+    .nav-menu.active { left: 0; }
+    .main-slider { height: 40vh; }
+}

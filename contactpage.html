@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>संपर्क - ग्रामपंचायत राळेगणसिद्धी</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="style-contact.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/Cp4qY71K/l-OGOEm.jpg" alt="Logo" />
+                <span>ग्रा. पं. राळेगणसिद्धी</span>
+            </div>
+            <nav class="nav-container">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
+                   <li><a href="#history"><i class="fas fa-history"></i> इतिहास</a></li>
+                    <li><a href="about-vission.css"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
+                    <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+                </ul>
+                <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <div class="contact-page">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1>संपर्क</h1>
+                    <p>ग्रामपंचायत कार्यालयाशी संपर्क साधा</p>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>पत्ता:</strong><br>
+                            राळेगणसिद्धी गणपती मंदिर परिसर, ता. पारनेर, जि. अहिल्यानगर ४१४३०२
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>मोबाईल नंबर:</strong><br>
+                            ८८८८००७२५५ / ७५८८५४३७९९
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>ईमेल:</strong><br>
+                            demo@gmail.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>वेळ:</strong><br>
+                            सोमवार - शुक्रवार : सकाळी ९:४५ ते सायं ६:१५ वा.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-section">
+                    <h3>आम्हाला फॉलो करा</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="tw"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.485125308807!2d74.4533!3d19.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcc083693e5361%3A0x8e8e8e8e8e8e8e8e!2sRalegan%20Siddhi%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025-2026 राळेगणसिद्धी | Developed By: Tandale</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+        window.addEventListener('scroll', function () {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
