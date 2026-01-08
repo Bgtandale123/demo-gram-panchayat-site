@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>फोटो गॅलरी - ग्रामपंचायत राळेगणसिद्धी</title>
+    <title>गॅलरी - ग्रामपंचायत राळेगणसिद्धी</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -12,63 +12,175 @@
 </head>
 <body>
 
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="https://i.ibb.co/Cp4qY71K/l-OGOEm.jpg" alt="Logo" />
-                <span>ग्रा. पं. राळेगणसिद्धी</span>
-            </div>
-            <nav class="nav-container">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
-                    <li><a href="about-vission.css"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
-                    <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> गॅलरी</a></li>
-                    <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
-                </ul>
-                <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
-            </nav>
+   <header class="header" id="header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="https://i.ibb.co/Cp4qY71K/l-OGOEm.jpg" alt="Logo" />
+            <span>ग्रा. पं. राळेगणसिद्धी</span>
         </div>
-    </header>
+        
+        <nav class="nav-container">
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
+                <li><a href="index.html#history"><i class="fas fa-history"></i> इतिहास</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
+                <li><a href="gallery.html" class="active"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
+                <li><a href="index.html#stats"><i class="fas fa-info-circle"></i> माहिती</a></li>
+                <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+            </ul>
+            <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+        </nav>
+    </div>
+</header>
 
     <div class="main-wrapper">
-        <div class="gallery-page">
-            <div class="gallery-container">
-                <div class="gallery-header">
-                    <h1>फोटो गॅलरी</h1>
-                    <p>ग्रामपंचायतच्या विविध कार्यक्रमांचे व विकासकामांचे फोटो</p>
-                </div>
+        <section class="gallery-hero">
+            <h1>फोटो गॅलरी</h1>
+            <p>आदर्श गाव राळेगणसिद्धीच्या विकासकामांची झलक</p>
+        </section>
 
-                <!-- <div class="photo-gallery">
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम १">
-                        <div class="gallery-caption">मुख्यमंत्री समृद्धी योजना</div>
-                    </div>
+        <div class="photo-grid">
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image1.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>आदर्श विद्यालय</span></div>
+        </div>
+    </div>
 
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम २">
-                        <div class="gallery-caption">ग्राम स्वच्छता अभियान</div>
-                    </div>
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image2.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>जलसंधारण प्रकल्प</span></div>
+        </div>
+    </div>
 
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम ३">
-                        <div class="gallery-caption">सौर ऊर्जा प्रकल्प उद्घाटन</div>
-                    </div>
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image3.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>ग्रामपंचायत कार्यालय</span></div>
+        </div>
+    </div>
 
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम ४">
-                        <div class="gallery-caption">वार्षिक ग्रामसभा</div>
-                    </div>
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image4.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>संत यादवबाबा मंदिर</span></div>
+        </div>
+    </div>
 
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम ५">
-                        <div class="gallery-caption">वृक्षारोपण कार्यक्रम</div>
-                    </div>
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image5.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>डिजिटल ग्राम</span></div>
+        </div>
+    </div>
 
-                    <div class="gallery-item">
-                        <img src="https://i.ibb.co/Sw5cw7cJ/News.jpg" alt="कार्यक्रम ६">
-                        <div class="gallery-caption">शाळा सुधारणा प्रकल्प</div>
-                    </div> -->
-                </div>
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image6.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>सौर ऊर्जा प्रकल्प</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image7.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे ७</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image8.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे ८</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image9.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे ९</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image10.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १०</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image11.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे ११</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image12.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १२</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image13.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १३</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image14.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १४</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image15.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १५</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image16.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १६</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image17.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १७</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image18.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १८</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image19.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे १९</span></div>
+        </div>
+    </div>
+
+    <div class="gallery-card">
+        <div class="image-box">
+            <img src="images/image20.jpeg" alt="राळेगणसिद्धी विकास">
+            <div class="overlay"><span>विकास कामे २०</span></div>
+        </div>
+    </div>
+</div>
+ 
             </div>
         </div>
     </div>
@@ -89,7 +201,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025-2026 राळेगणसिद्धी | Developed By: <strong>Tandale </strong></p>
+            <p>© 2025-2026 राळेगणसिद्धी | Developed By: <strong>Tandale</strong></p>
         </div>
     </footer>
 
