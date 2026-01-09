@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style-contact.css">
 </head>
 <body>
@@ -21,12 +22,20 @@
             
             <nav class="nav-container">
                 <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
-                    <li><a href="#history"><i class="fas fa-history"></i> इतिहास</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
                     <li><a href="about.html"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
-                    <li><a href="gallery.html"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
-                    <li><a href="#stats"><i class="fas fa-chart-bar"></i> माहिती</a></li>
-                    <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> गॅलरी</a></li>
+                    
+                    <li class="has-submenu">
+                        <a href="#"><i class="fas fa-link"></i> उपयुक्त दुवे <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Importantlinks.html">उपयुक्त वेबसाईट</a></li>
+                            <li><a href="Impnumbers.html">उपयुक्त नंबर्स</a></li>
+                        </ul>
+                    </li>
+                                        <li><a href="GramYojana.html"><i class="fas fa-chart-bar"></i> माहिती</a></li>
+
+                    <li><a href="contactpage.html" class="active"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
                 </ul>
                 <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
             </nav>
@@ -37,74 +46,99 @@
         <div class="contact-page">
             <div class="contact-container">
                 <div class="contact-header">
-                    <h1>संपर्क</h1>
-                    <p>ग्रामपंचायत कार्यालयाशी संपर्क साधा</p>
+                    <h1>संपर्क साधा</h1>
+                    <p>ग्रामपंचायत कार्यालयाशी संपर्क साधण्यासाठी खालील माहितीचा वापर करा</p>
                 </div>
 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>पत्ता:</strong><br>
-                            राळेगणसिद्धी गणपती मंदिर परिसर, ता. पारनेर, जि. अहिल्यानगर ४१४३०२
+                <div class="contact-grid-small">
+                    <div class="small-card">
+                        <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="card-details">
+                            <strong>पत्ता</strong>
+                            <span>राळेगणसिद्धी ग्रामपंचायत, ता. पारनेर, जि. अहिल्यानगर ४१४३०२</span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <strong>मोबाईल नंबर:</strong><br>
-                            ८८८८००७२५५ / ७५८८५४३७९९
+
+                    <div class="small-card">
+                        <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="card-details">
+                            <strong>सरपंच संपर्क</strong>
+                            <span><a href="tel:9307287172">९३०७२८७१७२</a></span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>ईमेल:</strong><br>
-                            demo@gmail.com
+
+                    <div class="small-card">
+                        <div class="card-icon"><i class="fas fa-user-cog"></i></div>
+                        <div class="card-details">
+                            <strong>ग्रामसेवक संपर्क</strong>
+                            <span><a href="tel:8888007255">८८८८००७२५५</a></span>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>वेळ:</strong><br>
-                            सोमवार - शुक्रवार : सकाळी ९:४५ ते सायं ६:१५ वा.
+
+                    <div class="small-card">
+                        <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="card-details">
+                            <strong>ईमेल</strong>
+                            <span class="email-text">grampanchayatraleganshidhi@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="small-card">
+                        <div class="card-icon"><i class="fas fa-clock"></i></div>
+                        <div class="card-details">
+                            <strong>वेळ</strong>
+                            <span>सोम-शुक्र: सकाळी १०.१५ ते सायं ६.१५</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="social-section">
-                    <h3>आम्हाला फॉलो करा</h3>
-                    <div class="social-links">
-                        <a href="#" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank" class="tw"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" class="ig"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="map-section">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.485125308807!2d74.4533!3d19.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcc083693e5361%3A0x8e8e8e8e8e8e8e8e!2sRalegan%20Siddhi%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+                <div class="map-section-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15065.73322144702!2d74.4519961!3d19.0446781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcc439121d5967%3A0x8979a022b7812903!2sRalegan%20Siddhi%2C%20Maharashtra%20414302!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">संपर्क</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> मु. पो. राळेगणसिद्धी, ता. पारनेर, जि. अहिल्यानगर</li>
+                    <li><i class="fas fa-phone"></i> +91 9579399425</li>
+                    <li><i class="fas fa-envelope"></i> grampanchayatraleganshidhi@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">सामाजिक चळवळ</h3>
+                <p>अण्णा हजारे यांच्या मार्गदर्शनाखाली राळेगणसिद्धीने आदर्श गाव संकल्पना यशस्वीपणे राबवली आहे.</p>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>© 2025-2026 राळेगणसिद्धी | Developed By: Tandale</p>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+        // Mobile Menu Toggle
         function toggleMenu() {
             document.getElementById('nav-menu').classList.toggle('active');
         }
+
+        // Header Scroll Effect
         window.addEventListener('scroll', function () {
             document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Dropdown Click for Mobile
+        document.querySelectorAll('.has-submenu > a').forEach(item => {
+            item.addEventListener('click', function (e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
         });
     </script>
 </body>

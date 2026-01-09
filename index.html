@@ -22,10 +22,17 @@
             <nav class="nav-container">
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="index.html" class="active"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
-                    <li><a href="#history"><i class="fas fa-history"></i> इतिहास</a></li>
+                    <li class="has-submenu">
+            <a href="#"><i class="fas fa-link"></i> उपयुक्त दुवे <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="ImpLinks.html"><i class="fas fa-external-link-alt"></i> उपयुक्त वेबसाईट</a></li>
+                <li><a href="Impnumbers.html"><i class="fas fa-phone-square-alt"></i> उपयुक्त नंबर्स</a></li>
+            </ul>
+        </li>
+                    <!-- <li><a href="ImpLinks.html"><i class="fas fa-history"></i> उपयुक्त दुवे</a></li> -->
                     <li><a href="about.html"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
                     <li><a href="gallery.html"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
-                    <li><a href="#stats"><i class="fas fa-chart-bar"></i> माहिती</a></li>
+                    <li><a href="GramYojana.html"><i class="fas fa-chart-bar"></i> माहिती</a></li>
                     <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
                 </ul>
                 <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
@@ -42,8 +49,8 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="images/temple.jpeg" alt="Slide 1" /></div>
                 <div class="swiper-slide"><img src="images/gramp.jpeg" alt="Slide 2" /></div>       
-                <div class="swiper-slide"><img src="images/image3.png" alt="Slide 3" /></div>
-                <div class="swiper-slide"><img src="images/yadavbaba.jpeg" alt="Slide 4" /></div>
+                <div class="swiper-slide"><img src="images/yadavbaba.jpeg" alt="Slide 3" /></div>
+                <div class="swiper-slide"><img src="images/image17.jpeg" alt="Slide 4" /></div>
             </div>
             <div class="swiper-pagination"></div>
         </section>
@@ -52,7 +59,8 @@
             <div class="welcome-section" id="history">
                 <h1>ग्रामपंचायत कार्यालय राळेगणसिद्धी मध्ये आपले स्वागत आहे</h1>
                 <p><strong>गावाची ओळख व इतिहास:</strong> राळेगणसिद्धी हे महाराष्ट्रातील अहिल्यानगर जिल्ह्यातील एक आदर्श गाव आहे. ज्येष्ठ समाजसेवक <strong>श्री. अण्णा हजारे</strong> यांच्या नेतृत्वाखाली येथे सामाजिक परिवर्तनाची सुरुवात झाली. जलसंधारण, स्वच्छता आणि शिस्तबद्ध ग्रामव्यवस्थेमुळे हे गाव जागतिक स्तरावर प्रसिद्ध आहे.</p>
-                <p>१९७० नंतर अण्णा हजारे यांनी दारूबंदी, श्रमदान आणि जलसंधारणाच्या माध्यमातून गावाचा कायापालट केला.</p>
+                <p>१९७० नंतर अण्णा हजारे यांनी दारूबंदी, श्रमदान, जलसंधारण आणि
+        वृक्ष लागवडीच्या माध्यमातून गावाचा कायापालट केला..</p>
             </div>
 
             <section class="village-info" id="stats">
@@ -113,6 +121,16 @@
                         <div class="news-img"><img src="images/news3.jpeg" alt="News 3"></div>
                         <div class="news-info"><span class="news-date"></span><h3>आरोग्य मंत्र्यांची राळेगणसिद्धी भेट.</h3></div>
                     </div>
+
+                     <div class="news-card" onclick="openLightbox('images/news3.jpeg')">
+                        <div class="news-img"><img src="images/news5.jpeg" alt="News 3"></div>
+                        <div class="news-info"><span class="news-date"></span><h3>राळेगणसिद्धीचा 'मुख्यमंत्री समृद्ध पंचायत राज अभियाना'त गौरव.</h3></div>
+                    </div>
+
+                     <div class="news-card" onclick="openLightbox('images/news3.jpeg')">
+                        <div class="news-img"><img src="images/news4.jpeg" alt="News 3"></div>
+                        <div class="news-info"><span class="news-date"></span><h3>स्वच्छता, विकास आणि सामाजिक जाणीव: त्रिवेणी संगम.<h3></div>
+                    </div>
                     
                 </div>
             </section>
@@ -146,8 +164,8 @@
                 <h3 class="footer-title">संपर्क</h3>
                 <ul class="footer-contact">
                     <li><i class="fas fa-map-marker-alt"></i> मु. पो. राळेगणसिद्धी, ता. पारनेर, जि. अहिल्यानगर</li>
-                    <li><i class="fas fa-phone"></i> +91 8888007255</li>
-                    <li><i class="fas fa-envelope"></i> contact@ralegansiddhi.org</li>
+                    <li><i class="fas fa-phone"></i> +91 9579399425</li>
+                    <li><i class="fas fa-envelope"></i> grampanchayatraleganshidhi@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-section">

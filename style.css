@@ -256,3 +256,73 @@ body {
     .news-grid-2x2 { grid-template-columns: 1fr; }
     .news-img { height: 300px; }
 }
+
+
+/* dropdown */
+
+/* Submenu (Dropdown) Container */
+.has-submenu {
+    position: relative;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 220px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+.has-submenu:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-menu li a {
+    color: #333 !important;
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent !important;
+    border-radius: 0 !important;
+    transition: 0.2s;
+}
+
+
+.dropdown-menu li a:hover {
+    background: #f1f8ff !important;
+    color: #009efd !important;
+    padding-left: 25px !important;
+}
+
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        display: none; 
+    }
+    .has-submenu.active .dropdown-menu {
+        display: block;
+    }
+}

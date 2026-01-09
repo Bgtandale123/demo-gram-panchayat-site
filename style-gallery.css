@@ -161,3 +161,196 @@ body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; ove
 .gallery-card:hover .overlay {
     opacity: 1; 
 }
+
+
+/* dropdown */
+
+/* Submenu (Dropdown) Container */
+.has-submenu {
+    position: relative;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 220px;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+.has-submenu:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-menu li a {
+    color: #333 !important;
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent !important;
+    border-radius: 0 !important;
+    transition: 0.2s;
+}
+
+
+.dropdown-menu li a:hover {
+    background: #f1f8ff !important;
+    color: #009efd !important;
+    padding-left: 25px !important;
+}
+
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        display: none; 
+    }
+    .has-submenu.active .dropdown-menu {
+        display: block;
+    }
+}
+
+/* =========================================
+   Camera Roll / Film Strip Hero Section
+   ========================================= */
+
+.gallery-hero {
+    position: relative;
+    height: 380px; /* थोडी उंची वाढवली जेणेकरून रील इफेक्ट छान दिसेल */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #111; /* गडद काळा रंग */
+    border-bottom: 5px solid #ff6d00; /* तळाला एक छान बॉर्डर */
+    margin-bottom: 40px;
+}
+
+/* Container to hide overflow */
+.camera-roll-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center; /* वर्टिकल सेंटर */
+    background: #000;
+}
+
+/* The Moving Track */
+.camera-track {
+    display: flex;
+    height: 280px; /* रीलची उंची */
+    animation: slideReel 30s linear infinite;
+    background: #000;
+    
+    /* Creating the Sprocket Holes (वर आणि खाली डॉटेड इफेक्ट) */
+    border-top: 25px dashed rgba(255, 255, 255, 0.4);
+    border-bottom: 25px dashed rgba(255, 255, 255, 0.4);
+    
+    padding: 15px 0; /* छिद्र आणि फोटोमध्ये अंतर */
+    box-shadow: 0 0 50px rgba(0,0,0,0.9) inset;
+}
+
+/* Individual Film Frame */
+.film-frame {
+    flex-shrink: 0;
+    width: 400px; /* एका फोटोची रुंदी */
+    height: 100%;
+    padding: 0 15px; /* दोन फोटोमधील काळा गॅप */
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* The Image inside the frame */
+.film-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: 0.7; /* थोडी ओपॅसिटी जेणेकरून मजकूर दिसेल */
+    filter: grayscale(30%) contrast(1.1); /* जुन्या फिल्मचा लूक */
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+/* Overlay for Text Visibility */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 2;
+}
+
+/* Text Styling */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 0px #000, 0 0 20px rgba(255,109,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    color: #f0f0f0;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Animation Keyframes */
+@keyframes slideReel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .gallery-hero { height: 280px; }
+    .camera-track { height: 200px; border-width: 15px; }
+    .film-frame { width: 250px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content p { font-size: 1rem; padding: 5px 15px; }
+}
