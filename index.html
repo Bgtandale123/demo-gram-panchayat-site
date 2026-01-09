@@ -20,23 +20,26 @@
             </div>
             
             <nav class="nav-container">
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
-                    <li class="has-submenu">
-            <a href="#"><i class="fas fa-link"></i> उपयुक्त दुवे <i class="fas fa-chevron-down"></i></a>
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> मुखपृष्ठ</a></li>
+        
+        <li class="has-submenu">
+            <a href="javascript:void(0)" onclick="toggleDropdown(this)">
+                <i class="fas fa-link"></i> उपयुक्त दुवे <i class="fas fa-chevron-down arrow-icon"></i>
+            </a>
             <ul class="dropdown-menu">
                 <li><a href="ImpLinks.html"><i class="fas fa-external-link-alt"></i> उपयुक्त वेबसाईट</a></li>
                 <li><a href="ImpNumbers.html"><i class="fas fa-phone-square-alt"></i> उपयुक्त नंबर्स</a></li>
             </ul>
         </li>
-                    <!-- <li><a href="ImpLinks.html"><i class="fas fa-history"></i> उपयुक्त दुवे</a></li> -->
-                    <li><a href="about.html"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
-                    <li><a href="gallery.html"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
-                    <li><a href="GramYojana.html"><i class="fas fa-chart-bar"></i> माहिती</a></li>
-                    <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
-                </ul>
-                <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
-            </nav>
+
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> आमच्याबद्दल</a></li>
+        <li><a href="gallery.html"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
+        <li><a href="GramYojana.html"><i class="fas fa-chart-bar"></i> माहिती</a></li>
+        <li><a href="contactpage.html"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+    </ul>
+    <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+</nav>
         </div>
     </header>
 
@@ -180,31 +183,40 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Swiper Slider Initialization
-        const swiper = new Swiper('.main-slider', {
-            loop: true,
-            autoplay: { delay: 4000 },
-            pagination: { el: '.swiper-pagination', clickable: true },
-        });
+    // Swiper Slider
+    const swiper = new Swiper('.main-slider', {
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+    });
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            document.getElementById('nav-menu').classList.toggle('active');
-        }
+    // Mobile Menu Toggle
+    function toggleMenu() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    }
 
-        // Header Scroll Effect
-        window.addEventListener('scroll', function () {
-            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
-        });
+    // --- NEW: Mobile Dropdown Logic ---
+    function toggleDropdown(element) {
+        if (window.innerWidth <= 768) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    }
 
-        // News Lightbox Functions
-        function openLightbox(src) {
-            document.getElementById('news-lightbox').style.display = 'flex';
-            document.getElementById('modal-img').src = src;
-        }
-        function closeLightbox() {
-            document.getElementById('news-lightbox').style.display = 'none';
-        }
-    </script>
+    // Header Scroll Effect
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('header');
+        if(header) header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Lightbox Logic
+    function openLightbox(src) {
+        document.getElementById('news-lightbox').style.display = 'flex';
+        document.getElementById('modal-img').src = src;
+    }
+    function closeLightbox() {
+        document.getElementById('news-lightbox').style.display = 'none';
+    }
+</script>
 </body>
 </html>

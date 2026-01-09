@@ -1,102 +1,56 @@
-/* General Setup */
+/* =========================================
+   Global & Reset
+   ========================================= */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; }
 
-/* Header & Navbar (Consistent with your site) */
+/* =========================================
+   Header & Navbar
+   ========================================= */
 .header {
     background: linear-gradient(90deg, #2af598 0%, #009efd 100%);
-    padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
 }
-.header-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; }
+.header.scrolled { background: linear-gradient(180deg, #ffef00 0%, #ffb700 100%); }
+
+.header-container { 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 30px; 
+}
+
+.logo-container { display: flex; align-items: center; gap: 10px; }
 .logo-container img { height: 50px; border-radius: 50%; border: 2px solid #fff; }
+.logo-container span { font-size: 20px; font-weight: bold; color: #000; }
+
 .nav-menu { list-style: none; display: flex; gap: 10px; }
-.nav-menu a { text-decoration: none; color: #000; font-weight: 600; padding: 10px 20px; border-radius: 25px; transition: 0.3s; }
-.nav-menu a.active { background: rgba(255,255,255,0.3); }
-
-/* Yojana Page Styling */
-.main-wrapper { padding-top: 100px; }
-.yojana-page { background: linear-gradient(135deg, #e3f2fd, #f1f8ff); padding: 60px 20px; }
-.yojana-header { text-align: center; margin-bottom: 50px; }
-.yojana-header h1 { font-size: 42px; color: #1565c0; font-weight: 800; }
-
-.section-main-title { text-align: center; color: #1565c0; font-size: 30px; margin-bottom: 40px; }
-
-/* Scheme Cards */
-.active-schemes {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; max-width: 1200px; margin: 0 auto 80px;
+.nav-menu a { 
+    text-decoration: none; 
+    color: #000; 
+    font-weight: 600; 
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-.scheme-card {
-    background: #fff; padding: 30px; border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;
-    border-top: 5px solid #ff6d00; display: flex; flex-direction: column; justify-content: space-between;
-}
-.scheme-card:hover { transform: translateY(-10px); }
-.scheme-title { color: #1565c0; font-size: 24px; margin-bottom: 15px; }
-.scheme-tags { margin-bottom: 15px; }
-.tag { padding: 5px 12px; border-radius: 50px; font-size: 14px; font-weight: bold; margin-right: 5px; }
-.tag-center { background: #e3f2fd; color: #1565c0; }
-.tag-active { background: #e8f5e9; color: #2e7d32; }
-.scheme-desc { color: #555; margin-bottom: 20px; }
-.info-btn { 
-    text-decoration: none; background: #1565c0; color: #fff; 
-    padding: 10px; text-align: center; border-radius: 10px; font-weight: bold;
-}
+.nav-menu a:hover, .nav-menu a.active { background: rgba(255,255,255,0.3); }
 
-/* Scheme Types Circular Icons */
-.type-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; max-width: 1200px; margin: 0 auto 80px;
-}
-.type-card {
-    background: #fff; padding: 40px 20px; border-radius: 20px;
-    text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-}
-.type-icon {
-    width: 80px; height: 80px; background: #ff6d00; color: #fff;
-    border-radius: 50%; line-height: 80px; font-size: 32px; margin: 0 auto 20px;
-}
-.type-list { list-style: none; margin-top: 15px; text-align: left; padding-left: 20px; }
-.type-list li::before { content: "✔"; color: #2e7d32; margin-right: 10px; font-weight: bold; }
+/* =========================================
+   Dropdown Menu Styling (Fixed)
+   ========================================= */
+.has-submenu { position: relative; }
+.arrow-icon { transition: transform 0.3s ease; margin-left: 5px; }
 
-/* Apply Steps Infographic */
-.apply-steps {
-    background: #fff; padding: 60px 40px; border-radius: 30px;
-    max-width: 1200px; margin: 0 auto; text-align: center;
-}
-.steps-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px; margin-top: 50px;
-}
-.step-number {
-    width: 60px; height: 60px; background: #1565c0; color: #fff;
-    border-radius: 50%; line-height: 60px; font-size: 24px; font-weight: bold; margin: 0 auto 20px;
-}
-.step-card h3 { color: #ff6d00; margin-bottom: 10px; }
-
-/* Footer Bottom (Consistent) */
-.footer { background: #ff4500; color: #fff; padding: 20px; text-align: center; }
-
-/* Mobile Hamburger Menu */
-.hamburger { display: none; font-size: 25px; cursor: pointer; color: #fff; }
-@media (max-width: 768px) {
-    .hamburger { display: block; }
-    .nav-menu {
-        position: fixed; left: -100%; top: 80px; width: 100%; height: 100vh;
-        background: #009efd; flex-direction: column; align-items: center; padding-top: 40px; transition: 0.4s;
-    }
-    .nav-menu.active { left: 0; }
-}
-
-
-/* dropdown */
-
-/* Submenu (Dropdown) Container */
-.has-submenu {
-    position: relative;
-}
-
-/* Dropdown Menu Styling */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -114,27 +68,24 @@ body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; }
     z-index: 1000;
 }
 
-
-.has-submenu:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+/* Desktop Hover Effect */
+@media (min-width: 769px) {
+    .has-submenu:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .has-submenu:hover .arrow-icon {
+        transform: rotate(180deg);
+    }
 }
-
 
 .dropdown-menu li a {
     color: #333 !important;
     padding: 12px 20px !important;
-    display: flex !important;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    background: transparent !important;
     border-radius: 0 !important;
-    transition: 0.2s;
+    background: transparent !important;
 }
-
 
 .dropdown-menu li a:hover {
     background: #f1f8ff !important;
@@ -142,21 +93,70 @@ body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; }
     padding-left: 25px !important;
 }
 
+/* =========================================
+   Yojana Page Specific Styling
+   ========================================= */
+.main-wrapper { padding-top: 100px; }
+.yojana-page { background: linear-gradient(135deg, #e3f2fd, #f1f8ff); padding: 60px 20px; }
 
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        background: rgba(255, 255, 255, 0.1);
-        display: none; 
-    }
-    .has-submenu.active .dropdown-menu {
-        display: block;
-    }
+.yojana-header { text-align: center; margin-bottom: 50px; }
+.yojana-header h1 { font-size: 42px; color: #1565c0; font-weight: 800; }
+.section-main-title { text-align: center; color: #1565c0; font-size: 30px; margin-bottom: 40px; }
+
+/* Scheme Cards */
+.active-schemes {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto 80px;
 }
+.scheme-card {
+    background: #fff; padding: 30px; border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;
+    border-top: 5px solid #ff6d00; display: flex; flex-direction: column; justify-content: space-between;
+}
+.scheme-card:hover { transform: translateY(-10px); }
+.scheme-title { color: #1565c0; font-size: 24px; margin-bottom: 15px; }
+
+.scheme-tags { margin-bottom: 15px; }
+.tag { padding: 5px 12px; border-radius: 50px; font-size: 14px; font-weight: bold; margin-right: 5px; }
+.tag-center { background: #e3f2fd; color: #1565c0; }
+.tag-active { background: #e8f5e9; color: #2e7d32; }
+
+.scheme-desc { color: #555; margin-bottom: 20px; }
+.info-btn { 
+    text-decoration: none; background: #1565c0; color: #fff; 
+    padding: 10px; text-align: center; border-radius: 10px; font-weight: bold;
+}
+
+/* Scheme Types Icons */
+.type-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto 80px;
+}
+.type-card {
+    background: #fff; padding: 40px 20px; border-radius: 20px;
+    text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+.type-icon {
+    width: 80px; height: 80px; background: #ff6d00; color: #fff;
+    border-radius: 50%; line-height: 80px; font-size: 32px; margin: 0 auto 20px;
+}
+.type-list { list-style: none; margin-top: 15px; text-align: left; padding-left: 20px; }
+.type-list li::before { content: "✔"; color: #2e7d32; margin-right: 10px; font-weight: bold; }
+
+/* Apply Steps */
+.apply-steps {
+    background: #fff; padding: 60px 40px; border-radius: 30px;
+    max-width: 1200px; margin: 0 auto; text-align: center;
+}
+.steps-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; margin-top: 50px;
+}
+.step-number {
+    width: 60px; height: 60px; background: #1565c0; color: #fff;
+    border-radius: 50%; line-height: 60px; font-size: 24px; font-weight: bold; margin: 0 auto 20px;
+}
+.step-card h3 { color: #ff6d00; margin-bottom: 10px; }
 
 /* =========================================
    Footer Styling
@@ -167,21 +167,55 @@ body { font-family: 'Baloo 2', sans-serif; background: #f8f9fa; color: #333; }
     margin-top: 60px;
     padding-top: 40px;
 }
-
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; padding: 0 20px;
 }
-
 .footer-section {
     background: linear-gradient(180deg, #ffef00 0%, #ffb700 100%);
-    padding: 25px;
-    border-radius: 20px;
+    padding: 25px; border-radius: 20px;
 }
-
+.footer-contact li { list-style: none; margin-bottom: 10px; }
+.footer-contact i { margin-right: 10px; color: #d32f2f; }
 .footer-bottom { text-align: center; padding: 20px; background: rgba(0,0,0,0.2); color: #fff; margin-top: 40px; }
 
+/* =========================================
+   Mobile Responsive Styles
+   ========================================= */
+.hamburger { display: none; font-size: 25px; cursor: pointer; color: #fff; }
+
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    
+    .nav-menu {
+        position: fixed; left: -100%; top: 80px; width: 100%; height: 100vh;
+        background: #009efd; flex-direction: column; align-items: flex-start; /* Align Left */
+        padding: 40px 20px; transition: 0.4s;
+        overflow-y: auto;
+    }
+    .nav-menu.active { left: 0; }
+    
+    .nav-menu li { width: 100%; margin-bottom: 10px; }
+    .nav-menu a { width: 100%; justify-content: flex-start; }
+
+    /* Mobile Dropdown Logic */
+    .dropdown-menu {
+        position: static; /* Stack naturally */
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.2);
+        display: none; /* Hidden by default */
+        width: 100%;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+    /* Shown when 'active' class is added via JS */
+    .has-submenu.active .dropdown-menu { display: block; }
+    
+    /* Rotate Arrow on Active */
+    .has-submenu.active .arrow-icon { transform: rotate(180deg); }
+}
