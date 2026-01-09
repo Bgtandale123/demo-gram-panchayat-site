@@ -38,6 +38,31 @@
         </div>
     </header>
 
+    <script>
+        // Main Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        // Submenu Toggle for Mobile
+        function toggleDropdown(element) {
+            // फक्त मोबाईल स्क्रीनसाठी (992px पेक्षा कमी)
+            if (window.innerWidth <= 992) {
+                var parentLi = element.parentElement;
+                parentLi.classList.toggle('active'); // active क्लास ॲड/रिमूव्ह करा
+            }
+        }
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('header');
+            if(header) {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            }
+        });
+    </script>
+
+
     <div class="main-wrapper">
         <section class="links-hero">
             <h1>उपयुक्त दुवे (Important Links)</h1>
